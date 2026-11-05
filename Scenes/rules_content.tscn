@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bps23kkddi1oy"]
+
+[ext_resource type="Script" path="res://Scripts/rules_content.gd" id="1_c5o7t"]
+
+[node name="RulesContent" type="VBoxContainer" unique_id=135727140]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c5o7t")
+
+[node name="RulesText" type="RichTextLabel" parent="." unique_id=1081256258]
+layout_mode = 2
+focus_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_following = true
+selection_enabled = true

@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://grl2mhfjn87s"]
+
+[ext_resource type="Script" uid="uid://bsyk4kb7xx7jj" path="res://Scripts/leaderboard.gd" id="1_0uewc"]
+[ext_resource type="Theme" uid="uid://btqq1q5jl24jk" path="res://Themes/game_theme.tres" id="1_fjik7"]
+[ext_resource type="Texture2D" uid="uid://cjha6ggwqmcow" path="res://Assets/Background - leaderboard.png" id="3_ay5h3"]
+[ext_resource type="Texture2D" uid="uid://cps02qvd6nmnj" path="res://Assets/animatedSprites/blue cristal sparkles animated sprite.png" id="4_mb3o2"]
+[ext_resource type="Texture2D" uid="uid://ba7qy1qppajy0" path="res://Assets/Clavier enchanté - main menu - cadre-1.png" id="4_n70i8"]
+[ext_resource type="FontFile" uid="uid://cp55hfnoaxeyx" path="res://Fonts/ThaleahFat.ttf" id="4_pobhu"]
+[ext_resource type="Texture2D" uid="uid://utm0a2tocoa0" path="res://Assets/animatedSprites/yellow cristal sparkles animated sprite.png" id="5_bvfs5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdjna"]
+atlas = ExtResource("4_mb3o2")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6havg"]
+atlas = ExtResource("4_mb3o2")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffw2q"]
+atlas = ExtResource("4_mb3o2")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7k871"]
+atlas = ExtResource("4_mb3o2")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86wec"]
+atlas = ExtResource("4_mb3o2")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbo8i"]
+atlas = ExtResource("4_mb3o2")
+region = Rect2(100, 200, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k5ee8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdjna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6havg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffw2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7k871")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86wec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbo8i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igvk0"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(0, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1yan6"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(300, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oavop"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(0, 200, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xffhp"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(300, 200, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmf10"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(0, 400, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4fyd"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(300, 400, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfciq"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(0, 600, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llj73"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(300, 600, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpgs0"]
+atlas = ExtResource("5_bvfs5")
+region = Rect2(0, 800, 300, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3gitr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igvk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1yan6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oavop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xffhp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmf10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4fyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfciq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_llj73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpgs0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n70i8"]
+content_margin_left = 100.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_eg6uk"]
+content_margin_top = 50.0
+color = Color(1, 0.8, 0, 1)
+grow_begin = -50.0
+grow_end = -50.0
+thickness = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eg6uk"]
+content_margin_top = 150.0
+content_margin_right = 100.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mb3o2"]
+content_margin_top = 150.0
+content_margin_right = 100.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ay5h3"]
+content_margin_top = 150.0
+content_margin_right = 100.0
+
+[sub_resource type="InputEventKey" id="InputEventKey_fjik7"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_pobhu"]
+events = [SubResource("InputEventKey_fjik7")]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvfs5"]
+content_margin_left = 120.0
+
+[node name="Leaderboard" type="Control" unique_id=411752496]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_fjik7")
+script = ExtResource("1_0uewc")
+
+[node name="Background" type="TextureRect" parent="." unique_id=716124038]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ay5h3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1576251850]
+custom_minimum_size = Vector2(1500, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -400.0
+offset_right = 750.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49803922)
+
+[node name="BlueCristalSparkles" type="AnimatedSprite2D" parent="." unique_id=1562207234]
+position = Vector2(647, 832)
+sprite_frames = SubResource("SpriteFrames_k5ee8")
+frame_progress = 0.17544478
+
+[node name="YellowCristalSparkles" type="AnimatedSprite2D" parent="." unique_id=1406569379]
+position = Vector2(256, 330)
+sprite_frames = SubResource("SpriteFrames_3gitr")
+frame_progress = 0.42515787
+
+[node name="YellowCristalSparkles2" type="AnimatedSprite2D" parent="." unique_id=1108237000]
+position = Vector2(539, 453.00003)
+rotation = -0.85480154
+scale = Vector2(0.5774935, 0.5774935)
+sprite_frames = SubResource("SpriteFrames_3gitr")
+frame_progress = 0.053365555
+
+[node name="YellowCristalSparkles3" type="AnimatedSprite2D" parent="." unique_id=372607437]
+position = Vector2(1796, 626)
+rotation = 0.9174819
+scale = Vector2(0.6405839, 0.6405839)
+sprite_frames = SubResource("SpriteFrames_3gitr")
+frame_progress = 0.61953026
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1139705635]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 101.0
+offset_right = 1801.0
+offset_bottom = 963.0
+texture = ExtResource("4_n70i8")
+
+[node name="MainContainer" type="VBoxContainer" parent="." unique_id=689019069]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -725.0
+offset_top = -394.8219
+offset_right = 718.0
+offset_bottom = 379.1781
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MainContainer" unique_id=500366505]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxEmpty_n70i8")
+text = "CLASSEMENT"
+
+[node name="Separator" type="HSeparator" parent="MainContainer" unique_id=1688450801]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxLine_eg6uk")
+
+[node name="ContentContainer" type="HBoxContainer" parent="MainContainer" unique_id=1107525232]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/ContentContainer" unique_id=1632296815]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TopLeaderboard" type="RichTextLabel" parent="MainContainer/ContentContainer/VBoxContainer" unique_id=514427659]
+custom_minimum_size = Vector2(600, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.83137256, 0.76862746, 0.627451, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("4_pobhu")
+theme_override_font_sizes/normal_font_size = 60
+
+[node name="MainMenuButton" type="Button" parent="MainContainer/ContentContainer/VBoxContainer" unique_id=682941642]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+tooltip_auto_translate_mode = 2
+theme = ExtResource("1_fjik7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eg6uk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mb3o2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ay5h3")
+shortcut = SubResource("Shortcut_pobhu")
+shortcut_in_tooltip = false
+text = "Menu Principal
+"
+
+[node name="LeaderboardList" type="RichTextLabel" parent="MainContainer/ContentContainer" unique_id=257044161]
+custom_minimum_size = Vector2(750, 650)
+layout_mode = 2
+size_flags_horizontal = 0
+tooltip_auto_translate_mode = 2
+theme_override_colors/default_color = Color(0.83137256, 0.76862746, 0.627451, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_constants/outline_size = 10
+theme_override_fonts/normal_font = ExtResource("4_pobhu")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bvfs5")
+vertical_alignment = 3
+
+[node name="Label" type="Label" parent="." unique_id=1587702909]
+visible = false
+layout_mode = 0
+offset_left = 555.0
+offset_top = 363.0
+offset_right = 1409.0
+offset_bottom = 428.0
+theme_override_colors/font_color = Color(0.83137256, 0.76862746, 0.627451, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 70
+text = "AUCUN SCORE ENREGISTRE"

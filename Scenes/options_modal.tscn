@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://b1ti5q774u3is"]
+
+[ext_resource type="Script" uid="uid://7dk0wty2bh3n" path="res://Scripts/options_modal.gd" id="1_g7ajv"]
+[ext_resource type="Texture2D" uid="uid://uxx0ed5l37j1" path="res://Assets/Clavier enchanté - main menu - background.png.png" id="2_ao2vh"]
+[ext_resource type="Texture2D" uid="uid://dmxcf2unsm721" path="res://Assets/Clavier enchanté - cadre.png.png" id="3_fawmv"]
+[ext_resource type="Texture2D" uid="uid://qa5kjh1eryf4" path="res://Assets/Clavier enchanté - main menu - cadre-2.png" id="4_figov"]
+[ext_resource type="FontFile" uid="uid://cp55hfnoaxeyx" path="res://Fonts/ThaleahFat.ttf" id="5_ao2vh"]
+[ext_resource type="PackedScene" uid="uid://bcb7qc1am73iv" path="res://Scenes/options_content.tscn" id="6_gf1f0"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ao2vh"]
+color = Color(1, 0.8, 0, 1)
+thickness = 5
+
+[sub_resource type="InputEventKey" id="InputEventKey_hs7a7"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_3rwup"]
+events = [SubResource("InputEventKey_hs7a7")]
+
+[node name="OptionsModal" type="Control" unique_id=162836592]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7ajv")
+
+[node name="Background DEBUG" type="TextureRect" parent="." unique_id=64641662]
+visible = false
+layout_mode = 1
+offset_top = 1.5
+offset_right = 1920.0
+offset_bottom = 1081.5
+texture = ExtResource("2_ao2vh")
+expand_mode = 1
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1340163524]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -940.0
+offset_top = -527.5
+offset_right = 436.0
+offset_bottom = -327.49997
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3677887, 5.2832503)
+color = Color(0.18039216, 0.18039216, 0.18039216, 0.7921569)
+
+[node name="Background2" type="TextureRect" parent="." unique_id=1059298483]
+layout_mode = 0
+offset_top = 1.5
+offset_right = 1920.0
+offset_bottom = 1081.5
+texture = ExtResource("3_fawmv")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1055915123]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 1077.0
+offset_top = 124.99999
+offset_right = 2453.0
+offset_bottom = 348.68704
+scale = Vector2(0.5588145, 3.1873965)
+color = Color(0.18039216, 0.18039216, 0.18039216, 0.7921569)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=804496222]
+layout_mode = 0
+offset_left = 773.0
+offset_top = 60.0
+offset_right = 2149.0
+offset_bottom = 911.5
+texture = ExtResource("4_figov")
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=1155630415]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 144.0
+offset_right = 1823.0
+offset_bottom = 814.0
+
+[node name="Title" type="Label" parent="Content" unique_id=1488497353]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_fonts/font = ExtResource("5_ao2vh")
+theme_override_font_sizes/font_size = 50
+text = "OPTIONS"
+
+[node name="Separator" type="HSeparator" parent="Content" unique_id=1427640045]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxLine_ao2vh")
+
+[node name="Body" type="VBoxContainer" parent="Content" unique_id=1012228499]
+layout_mode = 2
+
+[node name="OptionsContent" parent="Content/Body" unique_id=2096301594 instance=ExtResource("6_gf1f0")]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="Content" unique_id=447594943]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+shortcut = SubResource("Shortcut_3rwup")
+text = "Retour"

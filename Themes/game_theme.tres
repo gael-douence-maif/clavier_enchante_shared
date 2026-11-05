@@ -1,0 +1,46 @@
+[gd_resource type="Theme" format=3 uid="uid://btqq1q5jl24jk"]
+
+[ext_resource type="FontFile" uid="uid://cp55hfnoaxeyx" path="res://Fonts/ThaleahFat.ttf" id="1_qh1o2"]
+[ext_resource type="Texture2D" uid="uid://dc100l48wh7e5" path="res://Assets/rune bleue.png" id="2_v6q4r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfn8g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1w3f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pd6sc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2l2ys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jvwys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh1o2"]
+
+[resource]
+Button/colors/font_color = Color(0.83137256, 0.76862746, 0.627451, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.5411765, 0.47843137, 0.3764706, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 0)
+Button/constants/h_separation = 20
+Button/constants/icon_max_width = 64
+Button/constants/outline_size = 10
+Button/font_sizes/font_size = 60
+Button/fonts/font = ExtResource("1_qh1o2")
+Button/icons/icon = ExtResource("2_v6q4r")
+Button/styles/disabled = SubResource("StyleBoxEmpty_mfn8g")
+Button/styles/focus = SubResource("StyleBoxEmpty_p1w3f")
+Button/styles/hover = SubResource("StyleBoxEmpty_pd6sc")
+Button/styles/normal = SubResource("StyleBoxEmpty_2l2ys")
+Button/styles/pressed = SubResource("StyleBoxEmpty_jvwys")
+CheckButton/colors/button_checked_color = Color(1, 0.8, 0, 1)
+CheckButton/colors/icon_hover_color = Color(0, 0, 0, 0)
+CheckButton/colors/icon_hover_pressed_color = Color(0, 0, 0, 0)
+CheckButton/colors/icon_normal_color = Color(0, 0, 0, 0)
+CheckButton/colors/icon_pressed_color = Color(0, 0, 0, 0)
+CheckButton/styles/normal = SubResource("StyleBoxEmpty_qh1o2")
+Label/colors/font_color = Color(1, 0.8, 0, 1)
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_qh1o2")

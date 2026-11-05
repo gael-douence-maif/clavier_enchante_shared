@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://cxkyqchuddm0k"]
+
+[ext_resource type="Script" uid="uid://b4b5jculppv4d" path="res://Scripts/game_selection_modal.gd" id="1_8avst"]
+[ext_resource type="FontFile" uid="uid://cp55hfnoaxeyx" path="res://Fonts/ThaleahFat.ttf" id="2_4ksyl"]
+[ext_resource type="Texture2D" uid="uid://qa5kjh1eryf4" path="res://Assets/Clavier enchanté - main menu - cadre-2.png" id="2_m65ay"]
+[ext_resource type="Texture2D" uid="uid://dmxcf2unsm721" path="res://Assets/Clavier enchanté - cadre.png.png" id="4_y1esf"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_h8afy"]
+color = Color(1, 0.8, 0, 1)
+thickness = 5
+
+[sub_resource type="InputEventKey" id="InputEventKey_4jjt8"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_70f5q"]
+events = [SubResource("InputEventKey_4jjt8")]
+
+[node name="GameSelectionModal" type="Control" unique_id=1972806852]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8avst")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=813463286]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -940.0
+offset_top = -539.0
+offset_right = 436.0
+offset_bottom = -339.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3677887, 5.2832503)
+color = Color(0.18039216, 0.18039216, 0.18039216, 0.7921569)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1193060813]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 151.0
+offset_top = 192.0
+offset_right = 926.0
+offset_bottom = 903.0
+color = Color(0.18039216, 0.18039216, 0.18039216, 0.7921569)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1942376726]
+layout_mode = 0
+offset_left = -153.0
+offset_top = 128.0
+offset_right = 1223.0
+offset_bottom = 979.5
+texture = ExtResource("2_m65ay")
+
+[node name="Background2" type="TextureRect" parent="." unique_id=1473752502]
+layout_mode = 0
+offset_top = 1.5
+offset_right = 1920.0
+offset_bottom = 1081.5
+texture = ExtResource("4_y1esf")
+expand_mode = 1
+
+[node name="CadreRegles" type="TextureRect" parent="." unique_id=945171650]
+layout_mode = 1
+offset_left = 767.0
+offset_top = 159.0
+offset_right = 1983.8457
+offset_bottom = 902.5899
+scale = Vector2(0.75358766, 0.9924825)
+texture = ExtResource("2_m65ay")
+expand_mode = 1
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=1890181579]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -785.0
+offset_top = -316.0
+offset_right = -65.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Content" unique_id=630961208]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_fonts/font = ExtResource("2_4ksyl")
+theme_override_font_sizes/font_size = 50
+text = "CHOIX DU JEU"
+horizontal_alignment = 1
+
+[node name="Separator" type="HSeparator" parent="Content" unique_id=406270521]
+layout_mode = 2
+theme_override_constants/separation = 20
+theme_override_styles/separator = SubResource("StyleBoxLine_h8afy")
+
+[node name="SelectionAndRules" type="HBoxContainer" parent="Content" unique_id=2024583036]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 24
+
+[node name="GameListContainer" type="VBoxContainer" parent="Content/SelectionAndRules" unique_id=1447089098]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GameButton" type="VBoxContainer" parent="Content/SelectionAndRules/GameListContainer" unique_id=1501074092]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="ClassicButton" type="Button" parent="Content/SelectionAndRules/GameListContainer/GameButton" unique_id=737423260]
+layout_mode = 2
+focus_next = NodePath("../NewGameButton")
+focus_previous = NodePath("../../CloseButton")
+text = "Classic"
+
+[node name="NewGameButton" type="Button" parent="Content/SelectionAndRules/GameListContainer/GameButton" unique_id=1136182540]
+layout_mode = 2
+focus_next = NodePath("../../CloseButton")
+focus_previous = NodePath("../ClassicButton")
+text = "Mode instable"
+
+[node name="CloseButton" type="Button" parent="Content/SelectionAndRules/GameListContainer" unique_id=1638101693]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_next = NodePath("../GameButton/ClassicButton")
+focus_previous = NodePath("../GameButton/NewGameButton")
+shortcut = SubResource("Shortcut_70f5q")
+text = "Retour"
+
+[node name="RulesPanel" type="PanelContainer" parent="." unique_id=474913956]
+custom_minimum_size = Vector2(500, 600)
+propagate_maximum_size = false
+layout_mode = 0
+offset_left = 978.0
+offset_top = 220.0
+offset_right = 1478.0
+offset_bottom = 820.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Margin" type="MarginContainer" parent="RulesPanel" unique_id=106523264]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="RulesContainer" type="VBoxContainer" parent="RulesPanel/Margin" unique_id=1973126158]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RulesTitle" type="Label" parent="RulesPanel/Margin/RulesContainer" unique_id=1841602263]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_fonts/font = ExtResource("2_4ksyl")
+theme_override_font_sizes/font_size = 34
+text = "REGLES"
+
+[node name="RulesText" type="RichTextLabel" parent="RulesPanel/Margin/RulesContainer" unique_id=1934819364]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true

@@ -1,0 +1,312 @@
+[gd_scene format=3 uid="uid://cdgl5ognv6hge"]
+
+[ext_resource type="Script" uid="uid://cuwjp5wcpx05v" path="res://Scripts/main_menu.gd" id="1_06t4h"]
+[ext_resource type="Theme" uid="uid://btqq1q5jl24jk" path="res://Themes/game_theme.tres" id="1_qe12f"]
+[ext_resource type="Texture2D" uid="uid://uxx0ed5l37j1" path="res://Assets/Clavier enchanté - main menu - background.png.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://0gqq5xoiiby" path="res://Assets/animatedSprites/sparkle_blue_64.png" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://cxpwlqn3bhvr8" path="res://Assets/animatedSprites/sparkle_gold_64.png" id="4_nlkkf"]
+[ext_resource type="Script" uid="uid://bhg8ghu7pnvmy" path="res://Scripts/sparkle.gd" id="5_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://cqut8ik7vfyhx" path="res://Assets/animatedSprites/sparkle_gold_16.png" id="5_qe12f"]
+[ext_resource type="Texture2D" uid="uid://bum0y00gi3d60" path="res://Assets/Clavier enchanté - main menu - cadre menu.png.png" id="7_qe12f"]
+[ext_resource type="Texture2D" uid="uid://c1u1pw0osq48e" path="res://Assets/triangle maif.png" id="9_0o4t1"]
+[ext_resource type="FontFile" uid="uid://cp55hfnoaxeyx" path="res://Fonts/ThaleahFat.ttf" id="10_0k4wn"]
+[ext_resource type="Texture2D" uid="uid://dmxcf2unsm721" path="res://Assets/Clavier enchanté - cadre.png.png" id="12_j5v2v"]
+[ext_resource type="PackedScene" uid="uid://b1ti5q774u3is" path="res://Scenes/options_modal.tscn" id="13_iotk1"]
+[ext_resource type="PackedScene" uid="uid://cxkyqchuddm0k" path="res://Scenes/game_selection_modal.tscn" id="14_3xnf0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jix8l"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glbon"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlkkf"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qe12f"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qtwp"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dy7ct"]
+atlas = ExtResource("3_fu7sn")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0o4t1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jix8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glbon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlkkf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qe12f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qtwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dy7ct")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o4t1"]
+atlas = ExtResource("4_nlkkf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0k4wn"]
+atlas = ExtResource("4_nlkkf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5v2v"]
+atlas = ExtResource("4_nlkkf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotk1"]
+atlas = ExtResource("4_nlkkf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w44g7"]
+atlas = ExtResource("4_nlkkf")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm266"]
+atlas = ExtResource("4_nlkkf")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8g3n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0o4t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0k4wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5v2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iotk1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w44g7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cm266")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5qqf"]
+atlas = ExtResource("5_qe12f")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bbuq"]
+atlas = ExtResource("5_qe12f")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_saq78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5qqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bbuq")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="MainMenu" type="Control" unique_id=1445433969]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qe12f")
+script = ExtResource("1_06t4h")
+
+[node name="Background" type="TextureRect" parent="." unique_id=90754363]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("2_7vrkn")
+expand_mode = 1
+
+[node name="FairySparkleBlue_64" type="AnimatedSprite2D" parent="." unique_id=285182829]
+position = Vector2(364, 979)
+sprite_frames = SubResource("SpriteFrames_0o4t1")
+frame = 5
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="FairySparkleBlue_64_2" type="AnimatedSprite2D" parent="." unique_id=610751295]
+position = Vector2(703, 846)
+sprite_frames = SubResource("SpriteFrames_0o4t1")
+frame = 5
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="FairySparkleBlue_64_3" type="AnimatedSprite2D" parent="." unique_id=801980419]
+position = Vector2(1513, 992)
+sprite_frames = SubResource("SpriteFrames_0o4t1")
+frame = 5
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="FairySparkleGold_64" type="AnimatedSprite2D" parent="." unique_id=1138878970]
+position = Vector2(1651, 878)
+sprite_frames = SubResource("SpriteFrames_g8g3n")
+frame = 5
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=949774787]
+position = Vector2(412, 1009)
+sprite_frames = SubResource("SpriteFrames_saq78")
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="FairySparkleGold_65" type="AnimatedSprite2D" parent="." unique_id=1108280823]
+position = Vector2(1389, 818)
+sprite_frames = SubResource("SpriteFrames_g8g3n")
+frame = 5
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=1123274593]
+position = Vector2(842, 800)
+sprite_frames = SubResource("SpriteFrames_saq78")
+frame_progress = 1.0
+script = ExtResource("5_8qtwp")
+
+[node name="TriangleMaif" type="Sprite2D" parent="." unique_id=245994493]
+position = Vector2(1770.9999, 941)
+rotation = 0.21299842
+scale = Vector2(1.4666679, 1.4666679)
+texture = ExtResource("9_0o4t1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1369032482]
+custom_minimum_size = Vector2(150, 64)
+layout_mode = 0
+offset_left = 1709.0
+offset_top = 931.0
+offset_right = 1859.0
+offset_bottom = 995.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("10_0k4wn")
+theme_override_font_sizes/normal_font_size = 64
+text = "MAIF"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2096131169]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 418.99997
+offset_top = 483.0
+offset_right = 619.0
+offset_bottom = 683.0
+scale = Vector2(2.466877, 1.4586077)
+mouse_filter = 2
+color = Color(0.18039216, 0.18039216, 0.18039216, 0.7921569)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1410689701]
+layout_mode = 0
+offset_left = -29.0
+offset_top = 263.0
+offset_right = 1347.0
+offset_bottom = 1031.0
+mouse_filter = 2
+texture = ExtResource("7_qe12f")
+
+[node name="MenuContainer" type="VBoxContainer" parent="." unique_id=1729791655]
+layout_mode = 1
+offset_left = 457.0
+offset_top = 530.0
+offset_right = 957.0
+offset_bottom = 885.0
+scale = Vector2(0.75918525, 0.7577921)
+theme_override_constants/separation = 15
+
+[node name="PlayButton" type="Button" parent="MenuContainer" unique_id=1680100634]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_next = NodePath("../LeaderboardButton")
+focus_previous = NodePath("../QuitButton")
+text = "Jouer"
+flat = true
+
+[node name="LeaderboardButton" type="Button" parent="MenuContainer" unique_id=407289301]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_next = NodePath("../OptionsButton")
+focus_previous = NodePath("../PlayButton")
+text = "Classement"
+flat = true
+
+[node name="OptionsButton" type="Button" parent="MenuContainer" unique_id=1007671278]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_next = NodePath("../QuitButton")
+focus_previous = NodePath("../LeaderboardButton")
+text = "Options"
+flat = true
+
+[node name="QuitButton" type="Button" parent="MenuContainer" unique_id=1475239987]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_next = NodePath("../PlayButton")
+focus_previous = NodePath("../OptionsButton")
+text = "Quitter"
+flat = true
+
+[node name="Foreground" type="TextureRect" parent="." unique_id=2087862167]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("12_j5v2v")
+expand_mode = 1
+
+[node name="OptionsModal" parent="." unique_id=162836592 instance=ExtResource("13_iotk1")]
+visible = false
+layout_mode = 1
+
+[node name="GameSelectionModal" parent="." unique_id=457816579 instance=ExtResource("14_3xnf0")]
+visible = false
+layout_mode = 1
+
+[node name="VersionContainer" type="HBoxContainer" parent="." unique_id=2139892360]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 1002.0
+offset_right = 180.0
+offset_bottom = 1042.0
+
+[node name="VersionLabel" type="Label" parent="VersionContainer" unique_id=440078816]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "Version"
+
+[node name="VersionVariable" type="Label" parent="VersionContainer" unique_id=657802997]
+layout_mode = 2

@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://bcb7qc1am73iv"]
+
+[ext_resource type="Theme" uid="uid://btqq1q5jl24jk" path="res://Themes/game_theme.tres" id="1_l7ki7"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_l7ki7"]
+color = Color(1, 0.8, 0, 1)
+grow_begin = -50.0
+grow_end = -50.0
+thickness = 5
+
+[sub_resource type="FontFile" id="FontFile_l7ki7"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i46fr"]
+bg_color = Color(0.13319641, 0.13319641, 0.13319638, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr1p8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7ki7"]
+
+[node name="OptionsContent" type="VBoxContainer" unique_id=1907907633]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.5
+offset_top = -82.0
+offset_right = 145.5
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l7ki7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=695808699]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=158704881]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Mot de passe : "
+
+[node name="PasswordInput" type="LineEdit" parent="HBoxContainer" unique_id=461980958]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 20
+max_length = 40
+secret = true
+
+[node name="ProtectedOptions" type="VBoxContainer" parent="." unique_id=1979759992]
+layout_mode = 2
+
+[node name="SequenceContainer" type="HBoxContainer" parent="ProtectedOptions" unique_id=1289102003]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ProtectedOptions/SequenceContainer" unique_id=1948595927]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Sequence : "
+
+[node name="SequenceInput" type="LineEdit" parent="ProtectedOptions/SequenceContainer" unique_id=2073052498]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 20
+max_length = 40
+
+[node name="MemorizeTimeContainer" type="HBoxContainer" parent="ProtectedOptions" unique_id=1668527519]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ProtectedOptions/MemorizeTimeContainer" unique_id=1704131963]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Temps de memorisation : "
+
+[node name="MemorizeTimeInput" type="SpinBox" parent="ProtectedOptions/MemorizeTimeContainer" unique_id=982910207]
+layout_mode = 2
+theme_override_constants/buttons_width = 20
+
+[node name="WrongKeyPenaltyContainer" type="HBoxContainer" parent="ProtectedOptions" unique_id=1260141685]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ProtectedOptions/WrongKeyPenaltyContainer" unique_id=1538439734]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Penalite mauvaise lettre : "
+
+[node name="WrongKeyPenaltyInput" type="SpinBox" parent="ProtectedOptions/WrongKeyPenaltyContainer" unique_id=1174744396]
+layout_mode = 2
+theme_override_constants/buttons_width = 20
+
+[node name="TipsPenaltyContainer" type="HBoxContainer" parent="ProtectedOptions" unique_id=1356700577]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ProtectedOptions/TipsPenaltyContainer" unique_id=1947044654]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Penalite indice : "
+
+[node name="TipsPenaltyInput" type="SpinBox" parent="ProtectedOptions/TipsPenaltyContainer" unique_id=681556333]
+layout_mode = 2
+theme_override_constants/buttons_width = 20
+
+[node name="Separator" type="HSeparator" parent="." unique_id=1533520238]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxLine_l7ki7")
+
+[node name="AnimationsContainer" type="HBoxContainer" parent="." unique_id=1201286863]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="AnimationsContainer" unique_id=1651396836]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Animations : "
+
+[node name="AnimationsCheckButton" type="CheckButton" parent="AnimationsContainer" unique_id=1645229358]
+layout_mode = 2
+theme_override_constants/h_separation = -100
+button_pressed = true
+
+[node name="VideoContainer" type="HBoxContainer" parent="." unique_id=674810387]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VideoContainer" unique_id=2119030888]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Mode ecran : "
+
+[node name="ScreenModeOption" type="OptionButton" parent="VideoContainer" unique_id=456944670]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = SubResource("FontFile_l7ki7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_i46fr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qr1p8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ki7")
+selected = 0
+item_count = 2
+popup/item_0/text = "Fenetre"
+popup/item_0/id = 1
+popup/item_1/text = "Plein ecran"
+popup/item_1/id = 0
+
+[node name="Separator2" type="HSeparator" parent="." unique_id=350989623]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxLine_l7ki7")
+
+[node name="SaveOptionButton" type="Button" parent="." unique_id=1906643298]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Sauvergarder"
